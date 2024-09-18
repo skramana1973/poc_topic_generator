@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "poc_topic_generator"
+version = "0.1.0"
+description = "poc-topic-generator using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = ">=0.55.2,<1.0.0" }
+
+
+[tool.poetry.scripts]
+poc_topic_generator = "poc_topic_generator.main:run"
+run_crew = "poc_topic_generator.main:run"
+train = "poc_topic_generator.main:train"
+replay = "poc_topic_generator.main:replay"
+test = "poc_topic_generator.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
